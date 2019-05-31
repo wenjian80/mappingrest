@@ -20,6 +20,7 @@ push-release:
           cp $WERCKER_SOURCE_DIR/target/mappingrest.jar $WERCKER_SOURCE_DIR/dist/mappingrest.jar
     #- script:
     #    name: Setup monitoring agent
+    #a
     #    code: |
     #      unzip $WERCKER_SOURCE_DIR/deploy/monitoring/apmagent.zip -d ./dist
     - script:
