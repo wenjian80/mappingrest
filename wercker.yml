@@ -17,7 +17,7 @@ push-release:
         name: copy jar file to source root
         code: |
           mkdir $WERCKER_SOURCE_DIR/dist
-          cp $WERCKER_SOURCE_DIR/target/mappingrest.jar $WERCKER_SOURCE_DIR/dist/mappingrest.jar
+          cp $WERCKER_SOURCE_DIR/target/mappingrest-0.1.0.jar $WERCKER_SOURCE_DIR/dist/mappingrest.jar
     #- script:
     #    name: Setup monitoring agent
     #a
