@@ -32,7 +32,7 @@ push-release:
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
         registry: $DOCKER_REGISTRY
-        repository: $REPOSITORY/user-service        
+        repository: $REPOSITORY/mydemo/mappingrest        
         cmd: java -Djava.security.egd=file:/dev/./urandom -jar /pipeline/source/dist/mappingrest.jar
 
 scan-release:
