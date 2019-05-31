@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mappingrest
+  labels:
+    app: mappingrest
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    name: http
+  selector:
+    app: mappingrest
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mappingrest
+  labels:
+    app: mappingrest
+  namespace: ktbbackend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mappingrest
+  template:
+    metadata:
+      labels:
+        app: mappingrest
+    spec:
+      containers:
+      - name: mappingrest      
+        image: phx.ocir.io/mydemo3/mydemo/mappingrest:latest               
+        ports:
+        - containerPort: 8080
+          name: server
