@@ -69,6 +69,7 @@ public class Controller {
     	return bundleType;
     }
     
+    
     */
     @RequestMapping("/getmap")
     public List<Mapping> getMap() {
