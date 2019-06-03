@@ -50,6 +50,7 @@ public class Controller {
         
     }
     
+    /*
     @RequestMapping("/getbundle")
     public List<BundleType> getBundles() {
     	return bundlelist;
@@ -67,7 +68,7 @@ public class Controller {
     	    	    	
     	return bundleType;
     }
-    
+    */
     @RequestMapping("/getmap")
     public List<Mapping> getMap() {
     	return mappinglist;
