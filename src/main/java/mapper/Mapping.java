@@ -8,6 +8,7 @@ public class Mapping {
 	        this.account = account;
 	        this.phone = phone;
 	        	        
+	        
 	    }
 	 
 	 public String getAccount() {
