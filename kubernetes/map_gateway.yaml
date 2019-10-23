@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: map-gateway
-  namespace: ktbbackend
+  namespace: mybackend
 spec:
   selector:
     istio: ingressgateway # use istio default controller

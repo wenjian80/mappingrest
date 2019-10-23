@@ -19,7 +19,7 @@ metadata:
   name: mappingrest
   labels:
     app: mappingrest
-  namespace: ktbbackend
+  namespace: mybackend
 spec:
   replicas: 1
   selector:
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: mappingrest      
-        image: phx.ocir.io/mydemo3/mydemo/mappingrest:latest               
+        image: phx.ocir.io/apacaseanset01/mydemo/mappingrest:latest               
         ports:
         - containerPort: 8080
           name: server
