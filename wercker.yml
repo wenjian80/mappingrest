@@ -52,7 +52,22 @@ inject-secret:
         insecure-skip-tls-verify: true
         command: create secret docker-registry $OKE_SECRET --docker-server=$DOCKER_REGISTRY --docker-username="$DOCKER_USERNAME" --docker-password="$DOCKER_PASSWORD" --docker-email=$DOCKER_EMAIL -n $OKE_NAMESPACE; echo create registry secret
 
+undeploy-to-cluster:
+  box:
+    id: alpine
+    cmd: /bin/sh
+  steps:
 
+    #- bash-template:
+    #    input: ./kubernetes/*.yaml*
+    
+    - kubectl:
+        name: deploy to kubernetes
+        server: $KUBERNETES_MASTER
+        token: $KUBERNETES_TOKEN
+        insecure-skip-tls-verify: true
+        command: delete -f $WERCKER_SOURCE_DIR/kubernetes/ -n ${OKE_NAMESPACE}
+        
 deploy-to-cluster:
   box:
     id: alpine
